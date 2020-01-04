@@ -47,5 +47,11 @@ Within the framework of the project, simple CRUD operations are available, as we
 * /api/families/rank/mostEffective, GET
 ### Main
 * /api/deleteAll, POST
+### Relationships
+* FAMILY_MEMBER, Person-FAMILY_MEMBER->FAMILY
+* HAS_POSITION, Person-HAS_POSITION->POSITION (Founter/Boss/Underboss/Consigliere/Caporegime/Soldier/Associate)
+* IS, Person-IS->STATUS                       (At large, In prison, Dead)
+* KILLED_BY, Person-KILLED_BY->Person
+* ALLIANCE_WITH, Family-ALLIANCE_WITH->Family
 
 ![graph](/../master/src/main/resources/static/images/graph.png?raw=true "graph")
