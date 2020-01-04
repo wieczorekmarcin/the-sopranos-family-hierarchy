@@ -47,7 +47,7 @@ Within the framework of the project, simple CRUD operations are available, as we
 * /api/families/rank/mostEffective, GET
 ### Main
 * /api/deleteAll, POST
-### Relationships
+## Relationships
 * FAMILY_MEMBER, Person-FAMILY_MEMBER->FAMILY
 * HAS_POSITION, Person-HAS_POSITION->POSITION (Founter/Boss/Underboss/Consigliere/Caporegime/Soldier/Associate)
 * IS, Person-IS->STATUS                       (At large, In prison, Dead)
