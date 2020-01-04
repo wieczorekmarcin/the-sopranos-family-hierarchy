@@ -31,4 +31,4 @@ Within the framework of the project, simple CRUD operations are available, as we
 ### Main
 * /api/deleteAll, POST
 
-![graph](https://github.com/wieczorekmarcin/the-sopranos-family-hierarchy/tree/master/src/main/resources/static/images/graph.svg)
+![graph](/../master/src/main/resources/static/images/graph.png?raw=true "graph")
