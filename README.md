@@ -1,5 +1,5 @@
 # Crime Familes from the Sopranos and relationships between them.
-## Spring Boot app based on Neo4j Graph database
+## Spring Boot app based on Neo4j Graph database.
 
 The main assumption of the project is to present a model of mafia families operating in the US in New Jersey.
 
@@ -11,15 +11,15 @@ The prototype of the main idea was to present the structure of the real (actual)
 * easy transfer of "family trees" to graphs,
 * visualization of data pleasant to the eye,
 * focus on data extraction due to connections between nodes (in my project these are rankings),
-* Ease of adding new objects to others by REST-API,
+* ease of adding new objects to others by REST-API,
 * related objects, without affecting the existing data network,
 * speed of data processing by analyzing associations, instead of performing "overlapping" data on itself.
 
 ### Database specific properties (advanced):
-* implementation of REST-API in Java using the Bolt driver,
-* Interface Record - extracting information from a single record,
-* transactivity and session management,
-* passing parameters (variables) to queries in order to transfer the limit of received data and sorting method.
+* implementation of REST-API in Java using the Bolt driver (1),
+* Interface Record - extracting information from a single record (2),
+* transactivity and session management (3),
+* passing parameters (variables) to queries in order to transfer the limit of received data and sorting method (4).
 
 Within the framework of the project, simple CRUD operations are available, as well as more complex queries to extract information on e.g. the most brutal family :)
 
@@ -31,22 +31,22 @@ Within the framework of the project, simple CRUD operations are available, as we
 
 ## Endpoints
 ### Person
-* /api/persons, GET
-* /api/persons/{id}, GET
-* /api/persons, POST
-* /api/persons/{id}, PUT
-* /api/persons/rank/bestKillers, GET
-* /api/persons/rank/bestVictims, GET
+* /api/persons, GET (1)/(3)
+* /api/persons/{id}, GET (1)/(3)
+* /api/persons, POST (1)/(3)
+* /api/persons/{id}, PUT (1)/(3)
+* /api/persons/rank/bestKillers, GET (1)/(2)/(3)/(4)
+* /api/persons/rank/bestVictims, GET (1)/(2)/(3)/(4)
 ### Family
-* /api/families, GET
-* /api/families/{id}, GET
-* /api/families, POST
-* /api/families/{id}, PUT
-* /api/families/rank/wars, GET
-* /api/families/rank/mostBrutal, GET
-* /api/families/rank/mostEffective, GET
+* /api/families, GET (1)/(3)
+* /api/families/{id}, GET (1)/(3)
+* /api/families, POST (1)/(3)
+* /api/families/{id}, PUT (1)/(3)
+* /api/families/rank/wars, GET (1)/(2)/(3)
+* /api/families/rank/mostBrutal, GET (1)/(2)/(3)
+* /api/families/rank/mostEffective, GET (1)/(2)/(3)
 ### Main
-* /api/deleteAll, POST
+* /api/deleteAll, POST (1)/(3)
 ## Relationships
 * FAMILY_MEMBER, Person-FAMILY_MEMBER->FAMILY
 * HAS_POSITION, Person-HAS_POSITION->POSITION (Founter/Boss/Underboss/Consigliere/Caporegime/Soldier/Associate)
